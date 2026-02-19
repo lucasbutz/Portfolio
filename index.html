@@ -45,9 +45,9 @@
 		/* Layout */
 
 		.page {
-			max-width: 1080px;
+			max-width: 1200px;
 			margin: 0 auto;
-			padding: 32px 20px 64px;
+			padding: 32px 8px 64px;
 		}
 
 		header {
@@ -457,6 +457,98 @@
 			font-size: 0.78rem;
 			color: var(--text-muted);
 		}
+
+		/* Education / Certs / Courses */
+
+		.edu-section {
+			margin-top: 26px;
+		}
+
+		.edu-grid {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+			gap: 22px;
+		}
+
+		@media (max-width: 900px) {
+			.edu-grid {
+				grid-template-columns: minmax(0, 1fr);
+			}
+		}
+
+		.edu-card-title {
+			font-size: 1rem;
+			font-weight: 700;
+			color: var(--text-main);
+			margin-bottom: 2px;
+		}
+
+		.edu-card-sub {
+			font-size: 0.84rem;
+			color: var(--accent);
+			margin-bottom: 12px;
+		}
+
+		.edu-card-meta {
+			font-size: 0.82rem;
+			color: var(--text-muted);
+			margin-bottom: 10px;
+		}
+
+		.cert-item {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			padding: 9px 0;
+			border-bottom: 1px solid var(--border-subtle);
+		}
+
+		.cert-item:last-child {
+			border-bottom: none;
+		}
+
+		.cert-icon {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: var(--accent);
+			margin-top: 5px;
+			flex-shrink: 0;
+		}
+
+		.cert-name {
+			font-size: 0.9rem;
+			color: var(--text-main);
+			font-weight: 500;
+		}
+
+		.cert-issuer {
+			font-size: 0.78rem;
+			color: var(--text-muted);
+			margin-top: 2px;
+		}
+
+		.cert-pending {
+			font-size: 0.72rem;
+			padding: 2px 7px;
+			border-radius: var(--radius-pill);
+			background: rgba(79, 209, 197, 0.08);
+			border: 1px solid rgba(79, 209, 197, 0.3);
+			color: var(--accent);
+			margin-top: 3px;
+			display: inline-block;
+		}
+
+		.course-chip {
+			font-size: 0.78rem;
+			padding: 5px 10px;
+			border-radius: var(--radius-pill);
+			background: var(--chip-bg);
+			border: 1px solid rgba(55, 65, 81, 0.9);
+			color: var(--text-muted);
+			margin: 3px 3px 0 0;
+			display: inline-block;
+		}
 	</style>
 </head>
 <body>
@@ -675,9 +767,9 @@
 				<div class="contact-row">
 					<div>
 						<div class="contact-label">Email</div>
-						<a class="contact-link" href="mailto:lucasbuchli23@gmail.com">
+						<a class="contact-link" href="/cdn-cgi/l/email-protection#ff938a9c9e8c9d8a9c979396cdccbf98929e9693d19c9092">
 							<span class="icon"></span>
-							<span>lucasbuchli23@gmail.com</span>
+							<span><span class="__cf_email__" data-cfemail="bed2cbdddfcddccbddd6d2d78c8dfed9d3dfd7d290ddd1d3">lucasbuchli23@gmail.com</span></span>
 						</a>
 					</div>
 
@@ -691,18 +783,78 @@
 
 					<div>
 						<div class="contact-label">Resume</div>
-						<a class="contact-link" href="Cyber Resume (10).pdf" target="_blank" rel="noopener">
+						<a class="contact-link" href="./Cyber Resume (13).pdf" target="_blank" rel="noopener">
 							<span class="icon"></span>
 							<span>Download PDF Resume</span>
 						</a>
 					</div>
 				</div>
 
-				<div class="footer-note">
-					Based in Seattle, on PST 
-				</div>
+				<p class="footer-note">Based in Seattle, WA · Open to remote, hybrid, and in-person roles</p>
 			</section>
 		</div>
-	</div>
+
+		<!-- Education, Certifications & Coursework -->
+		<div class="edu-section">
+			<div class="edu-grid">
+
+				<!-- Education -->
+				<section class="card">
+					<div class="section-header">
+						<h2>Education</h2>
+					</div>
+					<div class="edu-card-title">University of Washington</div>
+					<div class="edu-card-sub">B.S. Informatics — Cybersecurity Focus</div>
+					<div class="edu-card-meta">Seattle, WA · Expected June 2026 · GPA: 3.82</div>
+					<p>Specialized coursework in security policy, threat analysis, and data systems within UW's Information School.</p>
+				</section>
+
+				<!-- Certifications -->
+				<section class="card">
+					<div class="section-header">
+						<h2>Certifications</h2>
+					</div>
+
+					<div class="cert-item">
+						<div class="cert-icon"></div>
+						<div>
+							<div class="cert-name">Wireless Security Training</div>
+							<div class="cert-issuer">DHS / Aviation IT security Program</div>
+						</div>
+					</div>
+
+					<div class="cert-item">
+						<div class="cert-icon" style="background: rgba(79,209,197,0.35);"></div>
+						<div>
+							<div class="cert-name">CompTIA Security+</div>
+							<div class="cert-issuer">CompTIA</div>
+							<div class="cert-pending">In Progress</div>
+						</div>
+					</div>
+
+				</section>
+
+				<!-- Relevant Coursework -->
+				<section class="card">
+					<div class="section-header">
+						<h2>Coursework</h2>
+						<span>UW Informatics</span>
+					</div>
+					<div>
+						<span class="course-chip">Cyber Resilience</span>
+						<span class="course-chip">International Cybersecurity</span>
+						<span class="course-chip">Databases & Data Modeling</span>
+						<span class="course-chip">Technical Writing</span>
+						<span class="course-chip">Statistical Analysis</span>
+						<span class="course-chip">Machine Learning Fundamentals</span>
+						<span class="course-chip">Data Structures & Algorithms</span>
+						<span class="course-chip">Client-Side Development</span>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+	</div><!-- /.page -->
 </body>
 </html>
